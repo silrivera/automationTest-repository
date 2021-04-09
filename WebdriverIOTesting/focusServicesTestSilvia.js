@@ -52,5 +52,10 @@ describe('FocusPageScript', ()=>{
         browser.pause(shortTime);
     }); 
 
+    it ('Validate title displayed on Central America : Title has to be "El salvador & Nicaragua"', ()=>{
+        FocusPage.validateTextDisplayed();
+        browser.pause(shortTime);
+    });
+
 
 });

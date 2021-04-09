@@ -34,6 +34,10 @@ const FocusPage = {
         return $("//span[text()='Central America']");
     },
 
+    get textDisplayed(){
+        return $("//h2[text()='El Salvador & Nicaragua']");
+    },
+
 
     fillInputField: function(search){
         this.inputField.waitForExist(shortTime);
@@ -78,6 +82,12 @@ const FocusPage = {
         this.centralAmericaLink.click();
     },
     
+    validateTextDisplayed: function(){
+        const validarText = this.textDisplayed.getText();
+        console.log(validarText);
+        expect(this.textDisplayed).toHaveTextContaining("El Salvador & Nicaragua");
+        this.textDisplayed.waitForExist(mediumTime);
+    },
 
 };
 module.exports = FocusPage;
