@@ -12,5 +12,8 @@ describe('FocusPageScript', ()=>{
         browser.pause(shortTime);
     });
 
-   
+    it('Typing in Google’s search : Focus Services',()=>{
+        FocusPage.fillInputField('Focus Services');
+        browser.pause(shortTime);
+    });
 });
