@@ -21,4 +21,10 @@ describe('FocusPageScript', ()=>{
         FocusPage.clickSearchButton();        
         browser.pause(shortTime);
     });
+
+    it('Click on link "https://www.focusservices.com” : Focus Services page', ()=>{
+        FocusPage.clickFocusPageLink();
+        browser.pause(shortTime);
+    });
+
 });

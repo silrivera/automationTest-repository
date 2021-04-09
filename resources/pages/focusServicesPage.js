@@ -10,6 +10,10 @@ const FocusPage = {
         return $("div[class*=tfB0Bf] input[class='gNO89b']");
     },
 
+    get FocusPageLink() {
+        return $("//*[text()='Focus Services – Beyond Expectations']");
+    },
+
 
     fillInputField: function(search){
         this.inputField.waitForExist(shortTime);
@@ -19,8 +23,13 @@ const FocusPage = {
     clickSearchButton: function(){
         this.searchButton.waitForExist(mediumTime);
         this.searchButton.click();
-
     },
+
+    clickFocusPageLink: function(){ 
+        this.FocusPageLink.waitForExist(mediumTime);
+        this.FocusPageLink.click();
+    },
+
 
 };
 module.exports = FocusPage;
