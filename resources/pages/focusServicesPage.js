@@ -10,7 +10,7 @@ const FocusPage = {
         return $("div[class*=tfB0Bf] input[class='gNO89b']");
     },
 
-    get FocusPageLink() {
+    get focusPageLink() {
         return $("//*[text()='Focus Services – Beyond Expectations']");
     },
 
@@ -26,8 +26,8 @@ const FocusPage = {
     },
 
     clickFocusPageLink: function(){ 
-        this.FocusPageLink.waitForExist(mediumTime);
-        this.FocusPageLink.click();
+        this.focusPageLink.waitForExist(mediumTime);
+        this.focusPageLink.click();
     },
 
 
