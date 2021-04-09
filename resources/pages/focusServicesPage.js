@@ -26,6 +26,10 @@ const FocusPage = {
         return $("//span[text()='Locations']");
     },
 
+    get northAmericaLink(){
+        return $("a[class='av-section-tab-title av-tab-no-icon av-tab-with-image noHover av-active-tab-title']");
+    },
+
 
     fillInputField: function(search){
         this.inputField.waitForExist(shortTime);
@@ -58,6 +62,13 @@ const FocusPage = {
         this.locationsTab.waitForExist(mediumTime);
         this.locationsTab.click();
     },
+
+    locateNorthAmericaLink: function(){
+        this.northAmericaLink.waitForExist(mediumTime);
+        this.northAmericaLink.scrollIntoView();
+        expect(this.northAmericaLink).toHaveLinkContaining('/#north-america');
+    },
+    
 
 };
 module.exports = FocusPage;

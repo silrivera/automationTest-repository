@@ -42,7 +42,10 @@ describe('FocusPageScript', ()=>{
         browser.pause(shortTime);
     });
 
-
+    it ('Locate North America Link : Do an assert on this link', ()=> {
+        FocusPage.locateNorthAmericaLink();
+        browser.pause(shortTime);           
+    }); 
 
 
 });
