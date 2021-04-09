@@ -18,6 +18,10 @@ const FocusPage = {
         return $("div[class*='spu-box spu-animation-fade spu-theme-elegant spu-position-centered'] a[class*='spu-close spu-close-popup spu-close-top_right']");
     },
 
+    get nowHiringButton(){
+        return $("//span[text()='Now Hiring!']");
+    },
+
 
     fillInputField: function(search){
         this.inputField.waitForExist(shortTime);
@@ -37,6 +41,13 @@ const FocusPage = {
     closePopUp: function(){
         this.popUp.waitForExist(mediumTime);
         this.popUp.click();
+    },
+
+    verifyNowHiringButton: function(){
+        this.nowHiringButton.waitForExist(mediumTime);
+        this.nowHiringButton.scrollIntoView();
+        this.nowHiringButton.waitForExist(mediumTime);
+        expect(this.nowHiringButton).toExist();
     },
 
 };

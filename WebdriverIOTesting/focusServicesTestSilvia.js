@@ -30,6 +30,15 @@ describe('FocusPageScript', ()=>{
     it ('Close pop up : Its appear when page is opened', ()=>{
         FocusPage.closePopUp();
         browser.pause(shortTime);
-   });
+    });
+
+    it ('Verify the “Now Hiring” button exists : Scroll down to the bottom of Focus Services page', ()=> {
+        FocusPage.verifyNowHiringButton();
+        browser.pause(shortTime);     
+   }); 
+
+
+
+
 
 });
