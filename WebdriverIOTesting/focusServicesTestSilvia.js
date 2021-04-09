@@ -35,8 +35,12 @@ describe('FocusPageScript', ()=>{
     it ('Verify the “Now Hiring” button exists : Scroll down to the bottom of Focus Services page', ()=> {
         FocusPage.verifyNowHiringButton();
         browser.pause(shortTime);     
-   }); 
+    }); 
 
+    it ('Click on Locations Tab : It will move to another page', ()=>{
+        FocusPage.clickLocationsTab();
+        browser.pause(shortTime);
+    });
 
 
 

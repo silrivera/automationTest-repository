@@ -22,6 +22,10 @@ const FocusPage = {
         return $("//span[text()='Now Hiring!']");
     },
 
+    get locationsTab(){
+        return $("//span[text()='Locations']");
+    },
+
 
     fillInputField: function(search){
         this.inputField.waitForExist(shortTime);
@@ -48,6 +52,11 @@ const FocusPage = {
         this.nowHiringButton.scrollIntoView();
         this.nowHiringButton.waitForExist(mediumTime);
         expect(this.nowHiringButton).toExist();
+    },
+
+    clickLocationsTab: function(){
+        this.locationsTab.waitForExist(mediumTime);
+        this.locationsTab.click();
     },
 
 };
