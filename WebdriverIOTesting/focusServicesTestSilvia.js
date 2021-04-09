@@ -47,5 +47,10 @@ describe('FocusPageScript', ()=>{
         browser.pause(shortTime);           
     }); 
 
+    it ('Click on Central America location : Go to this link content', ()=>{
+        FocusPage.clickCentralAmericaLink();
+        browser.pause(shortTime);
+    }); 
+
 
 });

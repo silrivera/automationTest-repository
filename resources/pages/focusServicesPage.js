@@ -30,6 +30,10 @@ const FocusPage = {
         return $("a[class='av-section-tab-title av-tab-no-icon av-tab-with-image noHover av-active-tab-title']");
     },
 
+    get centralAmericaLink(){
+        return $("//span[text()='Central America']");
+    },
+
 
     fillInputField: function(search){
         this.inputField.waitForExist(shortTime);
@@ -67,6 +71,11 @@ const FocusPage = {
         this.northAmericaLink.waitForExist(mediumTime);
         this.northAmericaLink.scrollIntoView();
         expect(this.northAmericaLink).toHaveLinkContaining('/#north-america');
+    },
+
+    clickCentralAmericaLink: function(){
+        this.centralAmericaLink.waitForExist(mediumTime);
+        this.centralAmericaLink.click();
     },
     
 
