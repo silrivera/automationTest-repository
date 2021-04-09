@@ -57,5 +57,10 @@ describe('FocusPageScript', ()=>{
         browser.pause(shortTime);
     });
 
+    it ('Click on Asia location : Go to this link content', ()=>{
+        FocusPage.clickAsiaLink();
+        browser.pause(shortTime);
+    }); 
+
 
 });

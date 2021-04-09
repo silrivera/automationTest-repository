@@ -38,6 +38,10 @@ const FocusPage = {
         return $("//h2[text()='El Salvador & Nicaragua']");
     },
 
+    get asiaLink(){
+        return $("//span[text()='Asia']");
+    },
+
 
     fillInputField: function(search){
         this.inputField.waitForExist(shortTime);
@@ -87,6 +91,11 @@ const FocusPage = {
         console.log(validarText);
         expect(this.textDisplayed).toHaveTextContaining("El Salvador & Nicaragua");
         this.textDisplayed.waitForExist(mediumTime);
+    },
+
+    clickAsiaLink: function(){
+        this.asiaLink.waitForExist(mediumTime);
+        this.asiaLink.click();
     },
 
 };
