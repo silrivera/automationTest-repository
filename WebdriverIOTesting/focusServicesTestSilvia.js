@@ -62,5 +62,8 @@ describe('FocusPageScript', ()=>{
         browser.pause(shortTime);
     }); 
 
-
+    it ('Verify if exist the "Bacolod City, Philippines" text block : On Asia Location', ()=>{
+        FocusPage.validateTextBlockExist();
+        browser.pause(shortTime);
+    });   
 });

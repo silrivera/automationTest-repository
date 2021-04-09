@@ -42,6 +42,9 @@ const FocusPage = {
         return $("//span[text()='Asia']");
     },
 
+    get textBlockExist(){
+        return $("//b[text()='Bacolod City, Philippines']");
+    },
 
     fillInputField: function(search){
         this.inputField.waitForExist(shortTime);
@@ -96,6 +99,11 @@ const FocusPage = {
     clickAsiaLink: function(){
         this.asiaLink.waitForExist(mediumTime);
         this.asiaLink.click();
+    },
+
+    validateTextBlockExist: function(){
+        this.textBlockExist.waitForExist(mediumTime);
+        expect(this.textBlockExist).toExist();
     },
 
 };
