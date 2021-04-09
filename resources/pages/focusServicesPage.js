@@ -14,6 +14,10 @@ const FocusPage = {
         return $("//*[text()='Focus Services – Beyond Expectations']");
     },
 
+    get popUp(){
+        return $("div[class*='spu-box spu-animation-fade spu-theme-elegant spu-position-centered'] a[class*='spu-close spu-close-popup spu-close-top_right']");
+    },
+
 
     fillInputField: function(search){
         this.inputField.waitForExist(shortTime);
@@ -30,6 +34,10 @@ const FocusPage = {
         this.focusPageLink.click();
     },
 
+    closePopUp: function(){
+        this.popUp.waitForExist(mediumTime);
+        this.popUp.click();
+    },
 
 };
 module.exports = FocusPage;

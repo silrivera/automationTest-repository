@@ -27,4 +27,9 @@ describe('FocusPageScript', ()=>{
         browser.pause(shortTime);
     });
 
+    it ('Close pop up : Its appear when page is opened', ()=>{
+        FocusPage.closePopUp();
+        browser.pause(shortTime);
+   });
+
 });
