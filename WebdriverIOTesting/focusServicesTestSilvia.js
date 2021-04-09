@@ -16,4 +16,9 @@ describe('FocusPageScript', ()=>{
         FocusPage.fillInputField('Focus Services');
         browser.pause(shortTime);
     });
+
+    it('Click on “Search button” : To perform the seach', ()=>{
+        FocusPage.clickSearchButton();        
+        browser.pause(shortTime);
+    });
 });

@@ -6,10 +6,20 @@ const FocusPage = {
         return $("//input[@name='q']");
     },
 
+    get searchButton() {
+        return $("div[class*=tfB0Bf] input[class='gNO89b']");
+    },
+
 
     fillInputField: function(search){
         this.inputField.waitForExist(shortTime);
         this.inputField.setValue(search);
+    },
+
+    clickSearchButton: function(){
+        this.searchButton.waitForExist(mediumTime);
+        this.searchButton.click();
+
     },
 
 };
