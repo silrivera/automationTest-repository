@@ -10,7 +10,7 @@
 * Open an PowerShell windows as an Administrator.
 * Go to the rout where the folder with the project is. For example: PS C:\Users\patri\Documents\automationTest-repository-main
 * Execute the command: npm install
-* Then, go to the visual studio Code and click on File>Open File and search the folder with the project.
+* When installation is complete, go to the visual studio Code and click on File>Open File and search the folder with the project.
 * Once the project has been load, open a new terminal (Terminal>New Terminal) and run the project writing on the terminal: npm run test
 
 ### Structure of the project: 
